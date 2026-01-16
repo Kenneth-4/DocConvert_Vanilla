@@ -8,13 +8,13 @@ DocConvert/
 │   └── main.css
 ├── js/
 ├── prototype_images/
-├── contact_us.html
-├── index.html
-├── login.html
-├── main_dashboard.html
-├── pricing.html
-├── privacy_policy.html
-└── signup.html
+├── contact_us.html (input name)
+├── index.html (input name)
+├── login.html (input name)
+├── main_dashboard.html (input name)
+├── pricing.html (input name)
+├── privacy_policy.html (input name)
+└── signup.html (input name)
 ```
 
 ## About
