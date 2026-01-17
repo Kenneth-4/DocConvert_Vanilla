@@ -11,8 +11,8 @@ DocConvert/
 ├── contact_us.html (input name)
 ├── index.html (kelvin)
 ├── login.html (input name)
-├── main_dashboard.html (input name)
-├── pricing.html (input name)
+├── main_dashboard.html (kenneth)
+├── pricing.html (kenneth)
 ├── privacy_policy.html (input name)
 └── signup.html (input name)
 ```
