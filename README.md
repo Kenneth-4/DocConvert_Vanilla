@@ -9,7 +9,7 @@ DocConvert/
 ├── js/
 ├── prototype_images/
 ├── contact_us.html (input name)
-├── index.html (input name)
+├── index.html (kelvin)
 ├── login.html (input name)
 ├── main_dashboard.html (input name)
 ├── pricing.html (input name)

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert DOC/DOCX to PDF</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!--<link rel="stylesheet" href="css/main.css">-->
+</head>
+<body>
+    <div id="navbar">
+        <ul id="nav">
+            <li><a id="textlogo" href="index.html">
+                <svg id="logoIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                    <path d="M2 17l10 5 10-5"></path>
+                    <path d="M2 12l10 5 10-5"></path>
+                </svg>
+                DocConvert
+            </a></li>
+
+            <li><a id="mergelink" href="">Merge PDF</a></li>
+            <li><a id="splitlink" href="">Split PDF</a></li>
+            <li><a id="compresslink" href="">Compress PDF</a></li>
+            <li><a id="toolslink" href="">All Tools</a></li>
+
+            <li><a id="login" href="login.html">Log In</a></li>
+            <li><a id="signup" href="signup.html">Sign Up</a></li>
+        </ul>
+    </div>
+
+    <div id="filedrop">
+        <h1 id="bannermsg">CONVERT WORD TO PDF</h1>
+        <p id="undermsg1">High-quality conversion to transform your DOC and DOCX files into PDF</p>
+        <p id="undermsg2">documents that look exactly like the original.</p>
+        
+        <div id="dropsection">
+            <div id="dropzone">
+                <input type="file" id="fileInput" accept=".doc,.docx" style="display: none;" multiple>
+                <div id="dropContent">
+                    <svg id="dropIcon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    <p id="dropText">Drag and drop your Word files here</p>
+                    <p id="dropSubtext">or</p>
+                    <p id="dropSubtext1">select files from your computer storage or cloud storage</p>
+                    <button id="browseBtn" type="button">Browse</button>
+                    <p id="fileInfo"></p>
+                    <p id="fnltxt">🔒 Secure Processing</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <div id="howitworks">
+        <h1>How it works</h1>
+        <div id="stepsContainer">
+            <div class="stepCard" id="firstbox">
+                <div class="iconContainer">
+                    <svg class="stepIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                </div>
+                <h3>1. Upload files</h3>
+                <p>Choose the Word documents (.doc or .docx) you want to transform from your device or drag them into the box.</p>
+            </div>
+            <div class="stepCard" id="secondbox">
+                <div class="iconContainer">
+                    <svg class="stepIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24"></path>
+                    </svg>
+                </div>
+                <h3>2. Click Convert</h3>
+                <p>Our cloud-based tool quickly processes your files, maintaining formatting, fonts, and images.</p>
+            </div>
+            <div class="stepCard" id="thirdbox">
+                <div class="iconContainer">
+                    <svg class="stepIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                </div>
+                <h3>3. Download PDF</h3>
+                <p>Your PDF is ready! Save the converted files directly to your computer or upload them to your cloud storage.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="moretools">
+        <h1>More conversion tools</h1>
+        <div id="toolsContainer">
+            <div class="toolsColumn">
+                <h2>CONVERT TO PDF</h2>
+                <ul>
+                    <li><a href="#">Word to PDF</a></li>
+                    <li><a href="#">JPG to PDF</a></li>
+                    <li><a href="#">Excel to PDF</a></li>
+                    <li><a href="#">PPT to PDF</a></li>
+                </ul>
+            </div>
+            <div class="toolsColumn">
+                <h2>CONVERT FROM PDF</h2>
+                <ul>
+                    <li><a href="#">PDF to Word</a></li>
+                    <li><a href="#">PDF to JPG</a></li>
+                    <li><a href="#">PDF to Excel</a></li>
+                    <li><a href="#">PDF to PPT</a></li>
+                </ul>
+            </div>
+            <div class="toolsColumn">
+                <h2>OPTIMIZE PDF</h2>
+                <ul>
+                    <li><a href="#">Merge PDF</a></li>
+                    <li><a href="#">Split PDF</a></li>
+                    <li><a href="#">Compress PDF</a></li>
+                    <li><a href="#">Repair PDF</a></li>
+                </ul>
+            </div>
+            <div class="toolsColumn">
+                <h2>COMPANY</h2>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="indexfooter">
+        <div id="footerLeft">
+            <svg id="footerIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+            </svg>
+            <span id="copyright">© 2026 DocConvert. All rights reserved.</span>
+        </div>
+        <div id="footerRight">
+            <svg class="footerIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <svg class="footerIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+            <svg class="footerIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+        </div>
+    </div>
+
+    <script>
+        const dropzone = document.getElementById('dropzone');
+        const fileInput = document.getElementById('fileInput');
+        const browseBtn = document.getElementById('browseBtn');
+        const fileInfo = document.getElementById('fileInfo');
+
+        browseBtn.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            handleFiles(e.target.files);
+        });
+
+        dropzone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropzone.classList.add('drag-over');
+        });
+
+        dropzone.addEventListener('dragleave', () => {
+            dropzone.classList.remove('drag-over');
+        });
+
+        dropzone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropzone.classList.remove('drag-over');
+            const files = e.dataTransfer.files;
+            handleFiles(files);
+        });
+
+        function handleFiles(files) {
+            const validFiles = Array.from(files).filter(file => 
+                file.name.endsWith('.doc') || file.name.endsWith('.docx')
+            );
+
+            if (validFiles.length === 0) {
+                fileInfo.textContent = 'Please select Word files (.doc or .docx)';
+                fileInfo.style.color = '#d32f2f';
+                return;
+            }
+
+            if (validFiles.length === 1) {
+                fileInfo.textContent = `Selected: ${validFiles[0].name}`;
+            } else {
+                fileInfo.textContent = `Selected ${validFiles.length} files`;
+            }
+            fileInfo.style.color = '#236ddd';
+
+            console.log('Files selected:', validFiles);
+        }
+    </script>
+</body>
+</html>
