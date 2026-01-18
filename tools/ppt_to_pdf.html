@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convert Word to PDF | DocConvert</title>
+    <title>Convert PPT to PDF | DocConvert</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
     <header class="navbar">
         <div class="container navbar-container">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <div class="logo-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 2L3 7l10 5 10-5-10-5z"></path>
@@ -28,15 +28,15 @@
             </a>
 
             <nav class="nav-links">
-                <a href="#all">All Tools</a>
-                <a href="#all">Pricing</a>
-                <a href="#all">API<span class="beta-badge">Beta</span></a>
-                <a href="contact_us.html">Contact Us</a>
+                <a href="../index.html#all">All Tools</a>
+                <a href="../index.html#all">Pricing</a>
+                <a href="../index.html#all">API<span class="beta-badge">Beta</span></a>
+                <a href="../contact_us.html">Contact Us</a>
             </nav>
 
             <div class="auth-links">
-                <a href="login.html" class="login-link">Login</a>
-                <a href="signup.html" class="signup-btn">Sign Up</a>
+                <a href="../login.html" class="login-link">Login</a>
+                <a href="../signup.html" class="signup-btn">Sign Up</a>
             </div>
         </div>
     </header>
@@ -45,13 +45,13 @@
     <main>
         <section class="hero-section">
             <div class="container">
-                <h1 class="hero-title">Convert Word to PDF</h1>
-                <p class="hero-subtitle">High-quality conversion to transform your DOC and DOCX files into PDF documents
-                    that look exactly like the original.</p>
+                <h1 class="hero-title">Convert PPT to PDF</h1>
+                <p class="hero-subtitle">Convert your PowerPoint presentations to PDF. Make your slides easy to share
+                    and view.</p>
 
                 <div class="upload-card">
                     <div class="drop-zone" id="dropzone">
-                        <input type="file" id="fileInput" accept=".doc,.docx" multiple hidden>
+                        <input type="file" id="fileInput" accept=".ppt,.pptx" multiple hidden>
 
                         <div class="drop-content">
                             <div class="drop-icon">
@@ -59,14 +59,15 @@
                                     stroke-width="2">
                                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                     <polyline points="14 2 14 8 20 8"></polyline>
-                                    <line x1="12" y1="18" x2="12" y2="12"></line>
-                                    <line x1="9" y1="15" x2="15" y2="15"></line>
+                                    <path d="M10 9v6"></path>
+                                    <path d="M14 9v6"></path>
+                                    <path d="M10 12h4"></path>
                                 </svg>
                             </div>
-                            <h2>Drag and drop Word files here</h2>
+                            <h2>Drag and drop PPT files here</h2>
                             <p class="drop-subtext">or select files from your computer or cloud storage</p>
 
-                            <button type="button" class="btn-primary" id="browseBtn">Select Word files</button>
+                            <button type="button" class="btn-primary" id="browseBtn">Select PPT files</button>
 
                             <div class="secure-note">
                                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -99,7 +100,8 @@
                             </svg>
                         </div>
                         <h3>1. Upload files</h3>
-                        <p>Choose the Word documents (.doc or .docx) you want to transform from your device or drag them
+                        <p>Choose the PowerPoint documents (.ppt or .pptx) you want to transform from your device or
+                            drag them
                             into the box.</p>
                     </div>
 
@@ -115,7 +117,7 @@
                             </svg>
                         </div>
                         <h3>2. Click Convert</h3>
-                        <p>Our cloud-based tool quickly processes your files, maintaining formatting, fonts, and images.
+                        <p>Our cloud-based tool quickly processes your files, creating consistent and professional PDFs.
                         </p>
                     </div>
 
@@ -146,10 +148,10 @@
                     <div class="links-column">
                         <h4>Convert To PDF</h4>
                         <ul>
-                            <li><a href="index.html">Word to PDF</a></li>
-                            <li><a href="tools/jpg_to_pdf.html">JPG to PDF</a></li>
-                            <li><a href="tools/excel_to_pdf.html">Excel to PDF</a></li>
-                            <li><a href="tools/ppt_to_pdf.html">PPT to PDF</a></li>
+                            <li><a href="word_to_pdf.html">Word to PDF</a></li>
+                            <li><a href="jpg_to_pdf.html">JPG to PDF</a></li>
+                            <li><a href="excel_to_pdf.html">Excel to PDF</a></li>
+                            <li><a href="ppt_to_pdf.html">PPT to PDF</a></li>
                         </ul>
                     </div>
                     <div class="links-column">
@@ -174,8 +176,8 @@
                         <h4>Company</h4>
                         <ul>
                             <li><a href="#">About Us</a></li>
-                            <li><a href="contact_us.html">Contact</a></li>
-                            <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                            <li><a href="../contact_us.html">Contact</a></li>
+                            <li><a href="../privacy_policy.html">Privacy Policy</a></li>
                             <li><a href="#">Terms of Use</a></li>
                         </ul>
                     </div>
@@ -227,26 +229,19 @@
             </div>
         </div>
     </footer>
-    </div>
-    <script>
-        const API_BASE = 'http://127.0.0.1:8000';
 
+    <script>
         const dropzone = document.getElementById('dropzone');
         const fileInput = document.getElementById('fileInput');
         const browseBtn = document.getElementById('browseBtn');
         const fileInfo = document.getElementById('fileInfo');
-        const uploadConfirm = document.getElementById('uploadConfirm');
-        const uploadedFileName = document.getElementById('uploadedFileName');
-        const confirmConvertBtn = document.getElementById('confirmConvertBtn');
-        const chooseAnotherBtn = document.getElementById('chooseAnotherBtn');
-        const convertError = document.getElementById('convertError');
 
-        let selectedFile = null;
-
-        browseBtn.addEventListener('click', () => fileInput.click());
+        browseBtn.addEventListener('click', () => {
+            fileInput.click();
+        });
 
         fileInput.addEventListener('change', (e) => {
-            if (e.target.files && e.target.files.length) handleFiles(e.target.files);
+            handleFiles(e.target.files);
         });
 
         dropzone.addEventListener('dragover', (e) => {
@@ -254,77 +249,45 @@
             dropzone.classList.add('drag-over');
         });
 
-        dropzone.addEventListener('dragleave', () => dropzone.classList.remove('drag-over'));
+        dropzone.addEventListener('dragleave', () => {
+            dropzone.classList.remove('drag-over');
+        });
 
         dropzone.addEventListener('drop', (e) => {
             e.preventDefault();
             dropzone.classList.remove('drag-over');
-            if (e.dataTransfer.files && e.dataTransfer.files.length) handleFiles(e.dataTransfer.files);
-        });
-
-        chooseAnotherBtn.addEventListener('click', resetToDropZone);
-
-        confirmConvertBtn.addEventListener('click', async () => {
-            if (!selectedFile) return;
-            confirmConvertBtn.disabled = true;
-            confirmConvertBtn.textContent = 'Converting...';
-            convertError.classList.add('hidden');
-            convertError.textContent = '';
-
-            const form = new FormData();
-            form.append('file', selectedFile);
-
-            try {
-                const res = await fetch(`${API_BASE}/convert/doc-to-pdf`, {
-                    method: 'POST',
-                    body: form,
-                });
-                if (!res.ok) {
-                    const err = await res.json().catch(() => ({}));
-                    throw new Error(err.detail || `Request failed: ${res.status}`);
-                }
-                const blob = await res.blob();
-                const name = (res.headers.get('Content-Disposition') || '')
-                    .match(/filename="?([^";\n]+)"?/)?.[1] || selectedFile.name.replace(/\.docx$/i, '.pdf');
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = name;
-                a.click();
-                URL.revokeObjectURL(url);
-                resetToDropZone();
-            } catch (e) {
-                convertError.textContent = e.message || 'Conversion failed.';
-                convertError.classList.remove('hidden');
-                confirmConvertBtn.textContent = 'Convert & Download';
-                confirmConvertBtn.disabled = false;
-            }
+            const files = e.dataTransfer.files;
+            handleFiles(files);
         });
 
         function handleFiles(files) {
-            const valid = Array.from(files).find(f => /\.(docx?|doc)$/i.test(f.name));
-            if (!valid) {
-                fileInfo.textContent = 'Please select a Word file (.doc or .docx)';
+            const validFiles = Array.from(files).filter(file =>
+                file.name.toLowerCase().endsWith('.ppt') ||
+                file.name.toLowerCase().endsWith('.pptx')
+            );
+
+            if (validFiles.length === 0) {
+                fileInfo.textContent = 'Please select PPT files (.ppt or .pptx)';
                 fileInfo.style.color = '#ef4444';
                 return;
             }
-            selectedFile = valid;
-            fileInfo.textContent = '';
-            uploadedFileName.textContent = valid.name;
-            dropzone.classList.add('hidden');
-            uploadConfirm.classList.remove('hidden');
-        }
 
-        function resetToDropZone() {
-            selectedFile = null;
-            fileInput.value = '';
-            fileInfo.textContent = '';
-            convertError.textContent = '';
-            convertError.classList.add('hidden');
-            confirmConvertBtn.textContent = 'Convert & Download';
-            confirmConvertBtn.disabled = false;
-            uploadConfirm.classList.add('hidden');
-            dropzone.classList.remove('hidden');
+            if (validFiles.length === 1) {
+                fileInfo.textContent = `Selected: ${validFiles[0].name}`;
+            } else {
+                fileInfo.textContent = `Selected ${validFiles.length} files`;
+            }
+            fileInfo.style.color = '#2563EB';
+
+            // Simulate processing state
+            const originalText = browseBtn.textContent;
+            browseBtn.textContent = 'Processing...';
+            browseBtn.disabled = true;
+            setTimeout(() => {
+                browseBtn.textContent = originalText;
+                browseBtn.disabled = false;
+                alert('File uploaded successfully! (Simulation)');
+            }, 1000);
         }
     </script>
 </body>
