@@ -13,6 +13,10 @@ DocConvert/
 ├── login.html (Elim)
 ├── main_dashboard.html (kenneth)
 ├── pricing.html (kenneth)
+<<<<<<< Updated upstream
+=======
+├── api.html (kenneth)
+>>>>>>> Stashed changes
 ├── privacy_policy.html (input name)
 └── signup.html (input name)
 ```
