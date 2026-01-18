@@ -1,5 +1,5 @@
 # DocConvert
-
+# kelvin
 ## Project Structure
 
 ```
@@ -9,8 +9,8 @@ DocConvert/
 ├── js/
 ├── prototype_images/
 ├── contact_us.html (input name)
-├── index.html (input name)
-├── login.html (input name)
+├── index.html (kelvin)
+├── login.html (Elim)
 ├── main_dashboard.html (kenneth)
 ├── pricing.html (kenneth)
 ├── privacy_policy.html (input name)
