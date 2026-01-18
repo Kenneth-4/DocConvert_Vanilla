@@ -14,8 +14,6 @@
 </head>
 
 <body>
-
-    <!-- Navigation -->
     <header class="navbar">
         <div class="container navbar-container">
             <a href="index.html" class="logo">
@@ -228,69 +226,110 @@
                 </a>
             </div>
         </div>
-    </footer>
+        <<<<<<< HEAD </footer>
+            =======
+            </div>
+            >>>>>>> kelvin
 
-    <script>
-        const dropzone = document.getElementById('dropzone');
-        const fileInput = document.getElementById('fileInput');
-        const browseBtn = document.getElementById('browseBtn');
-        const fileInfo = document.getElementById('fileInfo');
+            <script>
+                const API_BASE = 'http://127.0.0.1:8000';
 
-        browseBtn.addEventListener('click', () => {
-            fileInput.click();
-        });
+                const dropzone = document.getElementById('dropzone');
+                const fileInput = document.getElementById('fileInput');
+                const browseBtn = document.getElementById('browseBtn');
+                const fileInfo = document.getElementById('fileInfo');
+                const uploadConfirm = document.getElementById('uploadConfirm');
+                const uploadedFileName = document.getElementById('uploadedFileName');
+                const confirmConvertBtn = document.getElementById('confirmConvertBtn');
+                const chooseAnotherBtn = document.getElementById('chooseAnotherBtn');
+                const convertError = document.getElementById('convertError');
 
-        fileInput.addEventListener('change', (e) => {
-            handleFiles(e.target.files);
-        });
+                let selectedFile = null;
 
-        dropzone.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            dropzone.classList.add('drag-over');
-        });
+                browseBtn.addEventListener('click', () => fileInput.click());
 
-        dropzone.addEventListener('dragleave', () => {
-            dropzone.classList.remove('drag-over');
-        });
+                fileInput.addEventListener('change', (e) => {
+                    if (e.target.files && e.target.files.length) handleFiles(e.target.files);
+                });
 
-        dropzone.addEventListener('drop', (e) => {
-            e.preventDefault();
-            dropzone.classList.remove('drag-over');
-            const files = e.dataTransfer.files;
-            handleFiles(files);
-        });
+                dropzone.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    dropzone.classList.add('drag-over');
+                });
 
-        function handleFiles(files) {
-            const validFiles = Array.from(files).filter(file =>
-                file.name.endsWith('.doc') || file.name.endsWith('.docx')
-            );
+                dropzone.addEventListener('dragleave', () => dropzone.classList.remove('drag-over'));
 
-            if (validFiles.length === 0) {
-                fileInfo.textContent = 'Please select Word files (.doc or .docx)';
-                fileInfo.style.color = '#ef4444';
-                return;
-            }
+                dropzone.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    dropzone.classList.remove('drag-over');
+                    if (e.dataTransfer.files && e.dataTransfer.files.length) handleFiles(e.dataTransfer.files);
+                });
 
-            if (validFiles.length === 1) {
-                fileInfo.textContent = `Selected: ${validFiles[0].name}`;
-            } else {
-                fileInfo.textContent = `Selected ${validFiles.length} files`;
-            }
-            fileInfo.style.color = '#2563EB';
-            console.log('Files selected:', validFiles);
+                chooseAnotherBtn.addEventListener('click', resetToDropZone);
 
-            // Simulate processing state
-            const btn = document.getElementById('browseBtn');
-            const originalText = btn.textContent;
-            btn.textContent = 'Processing...';
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-                alert('File uploaded successfully! (Simulation)');
-            }, 1000);
-        }
-    </script>
+                confirmConvertBtn.addEventListener('click', async () => {
+                    if (!selectedFile) return;
+                    confirmConvertBtn.disabled = true;
+                    confirmConvertBtn.textContent = 'Converting...';
+                    convertError.classList.add('hidden');
+                    convertError.textContent = '';
+
+                    const form = new FormData();
+                    form.append('file', selectedFile);
+
+                    try {
+                        const res = await fetch(`${API_BASE}/convert/doc-to-pdf`, {
+                            method: 'POST',
+                            body: form,
+                        });
+                        if (!res.ok) {
+                            const err = await res.json().catch(() => ({}));
+                            throw new Error(err.detail || `Request failed: ${res.status}`);
+                        }
+                        const blob = await res.blob();
+                        const name = (res.headers.get('Content-Disposition') || '')
+                            .match(/filename="?([^";\n]+)"?/)?.[1] || selectedFile.name.replace(/\.docx$/i, '.pdf');
+                        const url = URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = name;
+                        a.click();
+                        URL.revokeObjectURL(url);
+                        resetToDropZone();
+                    } catch (e) {
+                        convertError.textContent = e.message || 'Conversion failed.';
+                        convertError.classList.remove('hidden');
+                        confirmConvertBtn.textContent = 'Convert & Download';
+                        confirmConvertBtn.disabled = false;
+                    }
+                });
+
+                function handleFiles(files) {
+                    const valid = Array.from(files).find(f => /\.(docx?|doc)$/i.test(f.name));
+                    if (!valid) {
+                        fileInfo.textContent = 'Please select a Word file (.doc or .docx)';
+                        fileInfo.style.color = '#ef4444';
+                        return;
+                    }
+                    selectedFile = valid;
+                    fileInfo.textContent = '';
+                    uploadedFileName.textContent = valid.name;
+                    dropzone.classList.add('hidden');
+                    uploadConfirm.classList.remove('hidden');
+                }
+
+                function resetToDropZone() {
+                    selectedFile = null;
+                    fileInput.value = '';
+                    fileInfo.textContent = '';
+                    convertError.textContent = '';
+                    convertError.classList.add('hidden');
+                    confirmConvertBtn.textContent = 'Convert & Download';
+                    confirmConvertBtn.disabled = false;
+                    uploadConfirm.classList.add('hidden');
+                    dropzone.classList.remove('hidden');
+                }
+            </script>
 </body>
 
 </html>
