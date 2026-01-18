@@ -13,7 +13,7 @@ DocConvert/
 ├── login.html (Elim)
 ├── main_dashboard.html (kenneth)
 ├── pricing.html (kenneth)
-├──api.html (kenneth)
+├── api.html (kenneth)
 ├── privacy_policy.html (input name)
 └── signup.html (input name)
 ```
