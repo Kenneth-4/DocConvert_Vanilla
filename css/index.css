@@ -1,6 +1,7 @@
 /* Global Reset & Typography */
 :root {
-    --primary: #2563EB; /* Royal Blue */
+    --primary: #2563EB;
+    /* Royal Blue */
     --primary-hover: #1d4ed8;
     --text-main: #111827;
     --text-secondary: #4B5563;
@@ -142,6 +143,22 @@ ul {
     margin: 0 auto 3rem;
 }
 
+.beta-badge {
+    font-size: 0.6rem;
+    padding: 2px 6px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2563EB, #1d4ed8);
+    color: white;
+    margin-left: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
 /* Upload Card / Drop Zone */
 .upload-card {
     background-color: var(--bg-white);
@@ -153,7 +170,8 @@ ul {
 }
 
 .drop-zone {
-    border: 2px dashed #BFDBFE; /* Light Blue */
+    border: 2px dashed #BFDBFE;
+    /* Light Blue */
     border-radius: 12px;
     padding: 4rem 2rem;
     background-color: #F8FAFC;
@@ -269,7 +287,8 @@ ul {
 }
 
 .step-icon {
-    background-color: #DBEAFE; /* Very light blue */
+    background-color: #DBEAFE;
+    /* Very light blue */
     color: var(--primary);
     width: 48px;
     height: 48px;
@@ -381,13 +400,14 @@ ul {
     }
 
     .nav-links {
-        display: none; /* simple mobile menu hiding for now */
+        display: none;
+        /* simple mobile menu hiding for now */
     }
-    
+
     .hero-title {
         font-size: 2.25rem;
     }
-    
+
     .footer-content {
         flex-direction: column;
         gap: 1rem;
